@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>City tag</title>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="/static/bootstrap/bootstrap.min.css">
+    <script src="/static/bootstrap/jquery.min.js"></script>
+    <script src="/static/bootstrap/bootstrap.min.js"></script>
+    <script src="/static/bootstrap/popper.min.js"></script>
+
+    <link rel="stylesheet" href="/static/css/root.css">
+    <link rel="stylesheet" href="/static/css/template.css">
+    
+</head>
+<body>
+    <div class="container mt-5">
+        <a href="/game/join_game" class="btn btn-primary btn-baby-blue">JOIN GAME</a>
+    </div>
+    <div class="container mt-5">
+        <a href="/game/create_game" class="btn btn-primary btn-baby-blue">CREATE GAME</a>
+    </div>
+</body>
+</html>

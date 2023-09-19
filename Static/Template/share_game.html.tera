@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>City tag</title>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="/static/bootstrap/bootstrap.min.css">
+    <script src="/static/bootstrap/jquery.min.js"></script>
+    <script src="/static/bootstrap/bootstrap.min.js"></script>
+    <script src="/static/bootstrap/popper.min.js"></script>
+
+    
+</head>
+<body>
+    <div class="container mt-5">
+        <p >Send this <a href="{{url}}">link</a> to the other players</p>
+    </div>
+</body>
+</html>

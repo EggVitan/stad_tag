@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+</html>
+<head>
+    <title>City tag</title>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="/static/bootstrap/bootstrap.min.css">
+    <script src="/static/bootstrap/jquery.min.js"></script>
+    <script src="/static/bootstrap/bootstrap.min.js"></script>
+    <script src="/static/bootstrap/popper.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">    
+
+    <link rel="stylesheet" href="/static/css/create_game.css">
+    <link rel="stylesheet" href="/static/css/template.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 400px;
+        }
+    </style>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([0, 0], 13); // Initial center and zoom level
+
+        // Add a base layer (you can choose different tilesets)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Get the user's current location
+        if ('geolocation' in navigator) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                var lat = position.coords.latitude;
+                var lon = position.coords.longitude;
+
+                // Create a marker for the user's location
+                var marker = L.marker([lat, lon]).addTo(map);
+                marker.bindPopup('Your Location').openPopup();
+
+                // Set the map view to the user's location
+                map.setView([lat, lon], 13);
+            }, function (error) {
+                console.error('Error getting location:', error);
+            });
+        } else {
+            console.error('Geolocation is not available in your browser.');
+        }
+</script>
+</body>

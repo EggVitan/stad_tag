@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+</html>
+<head>
+    <title>City tag</title>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="/static/bootstrap/bootstrap.min.css">
+    <script src="/static/bootstrap/jquery.min.js"></script>
+    <script src="/static/bootstrap/bootstrap.min.js"></script>
+    <script src="/static/bootstrap/popper.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">    
+
+    <link rel="stylesheet" href="/static/css/create_game.css">
+    <link rel="stylesheet" href="/static/css/template.css">
+
+</head>
+<body>
+    <form method="post">
+        <div class="mb-3">
+            <label for="game_name" class="form-label">What is the name of your game?</label>
+            <input type="text" class="form-control" id="game_name" name="game_name">
+        </div>
+        <div class="mb-3">
+            <label for="map_select" class="form-label">What map will you play in?</label>
+            <select class="form-control bg-light text-primary rounded" id="map_select" name="map_select">
+                {% for city in citys %}
+                <option> {{ city }} </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" id="username" name="username">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" class="form-control" name="password">
+        </div>
+        <button type="submit" class="btn btn-primary btn-baby-blue">Submit</button>
+    </form>
+    
+</body>
